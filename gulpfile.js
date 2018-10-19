@@ -13,10 +13,11 @@ const browserSync = require('browser-sync').create();
 // Tasks
 gulp.task('pug:dev', () => views('./dist'));
 gulp.task('pug:prod', () => views('./build'));
-gulp.task('sass:dev', () => styles('./dist'));
-gulp.task('sass:prod', () => styles('./build', false));
-gulp.task('js:dev', () => scripts('development', './dist'));
-gulp.task('js:prod', () => scripts('production', './build'));
+gulp.task('sass:dev', () => styles('./dist/css'));
+gulp.task('sass:prod', () => styles('./build/css', false));
+gulp.task('js:dev', () => scripts('development', './dist/js'));
+gulp.task('js:prod', () => scripts('production', './build/js'));
+gulp.task('assets', () => assets('./dist/assets'))
 
 // Pug
 const views = (dest) => {
@@ -35,7 +36,7 @@ const styles = (dest, map = true) => {
     .pipe(sass())
     .pipe(postcss())
     .pipe(gulpif(map, sourcemaps.write('./')))
-    .pipe(gulp.dest(`${dest}/css`))
+    .pipe(gulp.dest(dest))
     .pipe(browserSync.stream())
 }
 
@@ -44,7 +45,7 @@ const scripts = (mode, dest) => {
   webpackConfig.mode = mode;
   return gulp.src('./src/js/main.js')
     .pipe(webpackStream(webpackConfig, webpack))
-    .pipe(gulp.dest(`${dest}/js`))
+    .pipe(gulp.dest(dest))
     .pipe(browserSync.stream())
 }
 
@@ -67,3 +68,9 @@ gulp.task('build', ['pug:prod', 'sass:prod', 'js:prod'], () => {
   console.log(textColor, '🏗  Build completed in: ./build');
   console.log(textColor, '==============================');
 })
+
+// Assets copy
+const assets = (dest) => {
+  return gulp.src('./src/assets/**/*')
+    .pipe(gulp.dest(dest))
+}
