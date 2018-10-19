@@ -6,8 +6,16 @@ html(lang="en")
     block content
       .container
         .row
-          .col-12
-            h1 Random Quotes
+          .col
+            h1 Breaking Bad Quotes
+
+        .row
+          .col
+            ul#quotes
+
+        .row
+          .col
+            button#newQuote(type="button") New Quote
 
     include includes/footer
     include includes/scripts
