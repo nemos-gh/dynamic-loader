@@ -2,7 +2,8 @@
   '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 
 @import
-  './abstracts/variables';
+  './abstracts/variables',
+  './abstracts/mixins';
 
 @import
   './layout/general',

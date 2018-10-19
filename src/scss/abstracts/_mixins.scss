@@ -1,0 +1,18 @@
+// Media Queries
+// ==============================================
+@mixin mq-up($bp) {
+  @if map-has-key($map: $breakpoints, $key: $bp) {
+    @media (min-width: map-get($map: $breakpoints, $key: $bp)) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-down($bp) {
+  @if map-has-key($map: $breakpoints, $key: $bp) {
+    $width: map-get($map: $breakpoints, $key: $bp) - 1;
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+}
