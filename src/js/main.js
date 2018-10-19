@@ -16,7 +16,7 @@ let generateQuote = () => {
       quotes.forEach(quote => {
         let li = newNode('li');
         let bq = newNode('blockquote');
-        let q = newNode('q');
+        let q = newNode('p');
         let cite = newNode('cite');
 
         q.innerHTML = quote.quote;

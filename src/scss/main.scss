@@ -7,10 +7,13 @@
 
 @import
   './layout/general',
+  './layout/header',
   './layout/footer';
 
 @import
   './base/typography';
 
 @import
-  './components/buttons';
+  './components/buttons',
+  './components/quotes',
+  './components/blockquote';

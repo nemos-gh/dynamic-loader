@@ -1,0 +1,38 @@
+blockquote {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 80px;
+  padding: 0 0 40px;
+  width: 70%;
+  text-align: center;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    width: 300px;
+    height: 1px;
+    background-image: linear-gradient(-90deg, $orange, $maroon, $orange);
+  }
+  
+  p {
+    display: block;
+    color: navy;
+    font-size: 2.8rem;
+  }
+
+  cite {
+    margin-left: -28px;
+    font-size: 1.2rem;
+
+    &::before {
+      content:"\2014";
+      margin: 0 8px 0;
+    }
+  }
+}

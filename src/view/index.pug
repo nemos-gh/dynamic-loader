@@ -3,19 +3,18 @@ html(lang="en")
   include includes/head
 
   body
+    header
+      h1 Breaking Bad Quotes
+
     block content
       .container
-        .row
-          .col
-            h1 Breaking Bad Quotes
-
         .row
           .col
             ul#quotes
 
         .row
           .col
-            button#newQuote(type="button") New Quote
+            button#newQuote(type="button") Get Another
 
     include includes/footer
     include includes/scripts
