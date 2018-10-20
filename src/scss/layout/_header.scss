@@ -1,7 +1,4 @@
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,4 +7,21 @@ header {
   background-color: white;
   box-shadow: 0 0 80px rgba(0,0,0,.15);
   z-index: 100;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    padding: 12px;
+    background: white;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    img {
+      width: 80px;
+    }
+  }
 }
