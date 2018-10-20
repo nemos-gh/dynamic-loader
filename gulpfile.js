@@ -33,7 +33,7 @@ const views = (dest) => {
 const styles = (dest, map = true) => {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(gulpif(map, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss())
     .pipe(gulpif(map, sourcemaps.write('./')))
     .pipe(gulp.dest(dest))
