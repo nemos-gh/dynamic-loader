@@ -1,20 +1,24 @@
 button {
   display: block;
+}
 
-  &#newQuote {
-    margin: 0 auto 80px;
-    padding: 20px 50px;
-    color: white;
-    font-size: 1.2rem;
-    background-color: black;
-    transition: all .15s ease-in-out;
-    border: 0;
-    border-radius: 50px;
-    cursor: pointer;
-    outline: 0;
+#newQuote {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  padding: 10px;
+  background-color: white;
+  transition: all .15s ease-in-out;
+  border-radius: 50px;
+  box-shadow: 0 0 40px rgba(0,0,0,.1);
+  outline: 0;
 
-    &:hover {
-      padding: 20px 60px;
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 50px;
+    height: auto;
   }
 }
