@@ -12,16 +12,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
-  .logo {
+  .logo { 
+    margin-top: 5px;
     padding: 12px;
     background: white;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-radius: 50%;
 
     img {
-      width: 80px;
+      width: 80px; 
     }
   }
 }
