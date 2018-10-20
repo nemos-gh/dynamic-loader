@@ -5,7 +5,7 @@ header {
   width: 100%;
   height: $header-height;
   background-color: white;
-  box-shadow: 0 0 80px rgba(0,0,0,.15);
+  box-shadow: 0 0 100px rgba(0,0,0,.2);
   z-index: 100;
 
   .container {
@@ -15,14 +15,32 @@ header {
     position: relative;
   }
 
-  .logo { 
-    margin-top: 5px;
-    padding: 12px;
-    background: white;
-    border-radius: 50%;
+  .logo {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 20px + $logo-size;
+      height: 12px + $logo-size;
+      background: white;
+      border-radius: 50%;
+      z-index: -1;
+    }
 
     img {
-      width: 80px; 
+      margin: 12px 0 0 10px;
+      width: $logo-size; 
+      height: $logo-size;
     }
+  }
+
+  .title {
+    font-size: 22px;
+    font-family: 'Comfortaa', Helvetica, Arial, sans-serif;
+    font-weight: 700;
   }
 }

@@ -1,15 +1,11 @@
-button {
-  display: block;
-}
-
 #newQuote {
   position: fixed;
   right: 50px;
-  bottom: 100px;
+  bottom: 50px + $footer-height;
   padding: 10px;
   background-color: white;
   transition: all .15s ease-in-out;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 0 0 40px rgba(0,0,0,.1);
   outline: 0;
 

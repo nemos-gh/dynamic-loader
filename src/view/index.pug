@@ -3,13 +3,9 @@ html(lang="en")
   include includes/head
 
   body
-    header
-      .container
-        .logo
-          img(src="./assets/images/walter-white.svg")
-        h1 Breaking Bad Quotes
+    include includes/header
 
-    block content
+    .container
       ul#quotes
       a#newQuote(href="#") 
         img(src="./assets/images/swoosh-down.svg")
