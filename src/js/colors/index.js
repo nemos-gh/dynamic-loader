@@ -4,21 +4,16 @@
  */
 
 module.exports = {
-  "navy":    "#001F3F",
-  "blue":    "#0074D9",
-  "aqua":    "#7FDBFF",
-  "teal":    "#39CCCC",
-  "olive":   "#3D9970",
-  "green":   "#2ECC40",
-  "lime":    "#01FF70",
-  "yellow":  "#FFDC00",
-  "orange":  "#FF851B",
-  "red":     "#FF4136",
-  "fuchsia": "#F012BE",
-  "purple":  "#B10DC9",
-  "maroon":  "#85144B",
-  "white":   "#FFFFFF",
-  "silver":  "#DDDDDD",
-  "gray":    "#AAAAAA",
-  "black":   "#111111",
+  blue:    ['#0074D9', '#ffdc00'],
+  navy:    ['#001f3f', '#ff4136'],
+  aqua:    ['#7FDBFF', '#85144b'],
+  teal:    ['#39CCCC', '#001f3f'],
+  olive:   ['#3D9970', '#ffffff'],
+  green:   ['#2ECC40', '#001f3f'],
+  yellow:  ['#FFDC00', '#0074D9'],
+  orange:  ['#FF851B', '#001f3f'],
+  red:     ['#FF4136', '#ffffff'],
+  maroon:  ['#85144b', '#ff851b'],
+  lime:    ['#01FF70', '#85144b'],
+  gray:    ['#aaaaaa', '#111111']
 }
