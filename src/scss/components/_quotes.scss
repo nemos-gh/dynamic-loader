@@ -3,4 +3,10 @@ ul#quotes {
   padding: 0;
   list-style: none;
   transition: all .4s ease-in-out;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
