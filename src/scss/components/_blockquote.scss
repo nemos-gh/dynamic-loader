@@ -1,15 +1,16 @@
 blockquote {
-  position: relative;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 70%;
-  text-align: center;
+  margin-top: 30 - $header-height;
+  width: 60%;
+
+  @include mq-up(lg) { width: 700px; }
+  @include mq-up(xl) { width: 800px; }
   
   p {
-    font-size: 2.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    font-size: 3rem;
+    font-family: 'Love Ya Like A Sister', cursive;
+    border-bottom: 1px solid rgba(black, .1);
   }
 
   cite {
