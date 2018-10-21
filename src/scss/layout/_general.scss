@@ -12,10 +12,11 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0 15px;
   width: 100%;
   
-  @include mq-up(sm) { max-width: 90%; }
-  @include mq-up(md) { max-width: 860px; }
-  @include mq-up(lg) { max-width: 1140px; }
-  @include mq-up(xl) { max-width: 1440px; }
+  @include mq-up(sm) { width: 90%; padding: 0; }
+  @include mq-up(md) { width: 860px; }
+  @include mq-up(lg) { width: 1140px; }
+  @include mq-up(xl) { width: 1440px; }
 }
