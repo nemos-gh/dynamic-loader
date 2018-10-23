@@ -54,3 +54,18 @@ generateQuote();
 btnNew.addEventListener('click', () => generateQuote());
 
 window.addEventListener('resize', setQuotesHeight);
+
+
+// Reader Loader
+
+const body = document.body;
+const windowHeight = window.innerHeight;
+const loader = document.getElementById('loader');
+  
+document.addEventListener('scroll', () => {
+  let scrollY = window.scrollY;
+  let pageDiff = body.clientHeight - windowHeight;
+  let perc = scrollY / pageDiff * 100;
+
+  loader.style.width = perc + '%';
+});
