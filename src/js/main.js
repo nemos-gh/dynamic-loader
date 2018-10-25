@@ -13,7 +13,7 @@ let setQuotesHeight = () =>
 
 let randomColor = () => {
   let colors = Object.keys(Colors);
-  let id = Math.round(Math.random() * colors.length);
+  let id = Math.floor(Math.random() * colors.length);
 
   return colors[id];
 }
