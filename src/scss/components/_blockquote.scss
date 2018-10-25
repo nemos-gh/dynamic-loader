@@ -1,6 +1,6 @@
 blockquote {
   margin-top: 30 - $header-height;
-  padding-left: 50px;
+  padding: 30px 0 0 50px;
   width: 60%;
   border-top: 4px solid black;
 
@@ -9,8 +9,7 @@ blockquote {
   
   p {
     position: relative;
-    margin-bottom: 20px;
-    padding-top: 30px;
+    margin-bottom: 40px;
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -18,12 +17,16 @@ blockquote {
     &::before {
       content: url('../assets/images/quote.svg');
       position: absolute;
-      top: 20px;
+      top: -10px;
       left: -60px;
     }
   }
 
   cite {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+
+    &::before {
+      content: '__';
+    }
   }
 }
