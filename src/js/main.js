@@ -5,6 +5,10 @@ const ul = document.getElementById('quotes');
 const btnNew = document.getElementById('newQuote');
 let allQuotes = [];
 
+/**
+ * Functions
+ */
+
 let newNode = el => document.createElement(el);
 let append = (parent, el) => parent.append(el);
 
@@ -17,6 +21,10 @@ let randomColor = () => {
 
   return colors[id];
 }
+
+/**
+ * Fetch Breaking Bad API
+ */
 
 let generateQuote = () => {
 
@@ -56,7 +64,9 @@ btnNew.addEventListener('click', () => generateQuote());
 window.addEventListener('resize', setQuotesHeight);
 
 
-// Reader Loader
+/**
+ * Reader Loader
+ */
 
 const body = document.body;
 const windowHeight = window.innerHeight;
