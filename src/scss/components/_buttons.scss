@@ -1,7 +1,7 @@
 #newQuote {
   position: fixed;
-  right: 50px;
-  bottom: 50px + $footer-height;
+  right: 30px;
+  bottom: 30px + $footer-height;
   padding: 10px;
   background-color: white;
   transition: all .15s ease-in-out;
@@ -13,8 +13,17 @@
     transform: scale(1.1);
   }
 
+  @include mq-up(md) {
+    right: 50px;
+    bottom: 50px + $footer-height;
+  }
+
   img {
-    width: 50px;
+    width: 40px;
     height: auto;
+
+    @include mq-up(md) {
+      width: 50px;
+    }
   }
 }
