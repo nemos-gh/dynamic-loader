@@ -1,17 +1,26 @@
 blockquote {
   margin-top: 30 - $header-height;
+  padding-left: 50px;
   width: 60%;
+  border-top: 4px solid black;
 
   @include mq-up(lg) { width: 700px; }
   @include mq-up(xl) { width: 800px; }
   
   p {
+    position: relative;
     margin-bottom: 20px;
     padding-top: 30px;
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    border-top: 4px solid rgba(black, .6);
+
+    &::before {
+      content: url('../assets/images/quote.svg');
+      position: absolute;
+      top: 20px;
+      left: -60px;
+    }
   }
 
   cite {
