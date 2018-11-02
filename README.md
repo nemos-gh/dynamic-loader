@@ -1,5 +1,10 @@
 # Random Users
 
-Update page content preloader when the content is dynamically grow. 
+### Update preloader when the content is dynamically grow.
 
-Breaking Bad Quotes API used.
+
+1. Clone or download
+2. Install node modules: **yarn** or **npm i**
+3. Start dev server: **yarn serve** or **npm run serve**
+
+Breaking Bad Quotes API used 😇, check here https://github.com/shevabam/breaking-bad-quotes
